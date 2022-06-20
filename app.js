@@ -11,10 +11,6 @@ var app = express();
 
 app.use(cors());
 
-var indexRouter = require('./routes/index');
-
-var flightsRouter = require('./routes/api/flights');
-var usersRouter = require('./routes/api/users');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,6 +21,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+var indexRouter = require('./routes/index');
+
+var flightsRouter = require('./routes/api/flights');
+var usersRouter = require('./routes/api/users');
+
 
 // app.use('/', indexRouter);
 app.use('/api/flights', flightsRouter);
