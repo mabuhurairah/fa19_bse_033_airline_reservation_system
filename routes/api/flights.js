@@ -5,14 +5,6 @@ const admin = require('../../middlewares/admin');
 let router = express.Router();
 var { Flight } = require("../../models/flight");
 
-//get all flights
-router.get("/", async (req,res) => {
-    // console.log(req.query);
-    console.log(req.user);
-    let flights = await Flight.find();
-    return res.send(flights);
-});
-
 //get single flight
 router.get("/:id", auth, admin, async (req,res) => {
     try{
@@ -45,6 +37,14 @@ router.put("/:id", validateFlight, auth, admin, async (req,res) => {
 router.delete("/:id", auth, admin, async (req,res) => {
     let flight = await Flight.findByIdAndDelete(req.params.id);
     return res.send(flight);
+});
+
+//get all flights
+router.get("/", async (req,res) => {
+    // console.log(req.query);
+    console.log(req.user);
+    let flights = await Flight.find();
+    return res.send(flights);
 });
 
 //insert a flight

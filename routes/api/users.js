@@ -11,12 +11,6 @@ const admin = require('../../middlewares/admin');
 const validateUserLogin = require('../../middlewares/validateUserLogin');
 
 
-//get all users
-router.get("/", async (req,res) => {
-    let users = await User.find();
-    return res.send(users);
-});
-
 //get single user
 router.get("/:id", async (req,res) => {
     try{
@@ -45,6 +39,12 @@ router.put("/:id", async (req,res) => {
 router.delete("/:id", async (req,res) => {
     let user = await User.findByIdAndDelete(req.params.id);
     return res.send(user);
+});
+
+//get all users
+router.get("/", async (req,res) => {
+    let users = await User.find();
+    return res.send(users);
 });
 
 //insert a user
