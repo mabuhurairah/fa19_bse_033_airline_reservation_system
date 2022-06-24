@@ -1,0 +1,59 @@
+.Row {
+    margin-top: 10%;
+}
+.Col {
+    padding: 20px;
+    box-shadow: 0px 0px 16px 0px rgb(56, 107, 104);
+}
+
+.Admin {
+    margin-top: 6%;
+    background-color: rgb(255, 255, 255);
+}
+
+.AdminNavbar{
+    padding-left: 59%;
+}
+
+.LandingPageRow2{
+    text-align: center;
+}
+.LandingPageRow2:hover{
+    box-shadow: 0px 0px 16px 0px rgb(117, 219, 22);
+}
+.LandingPageRow3{
+    text-align: justify;
+    margin-top: 3%;
+}
+
+.LandingPageRow4 {
+    text-align: center;
+}
+
+.PageFooterContainer{
+    background-color: rgb(17, 16, 16);
+    text-align: center;
+    color: bisque;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.Navbar{
+    background-color: rgba(255, 255, 255, 0.651);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px double rgb(0, 0, 0);
+  
+}
+
+.Center{
+    text-align: center;
+}
+
+.Bottom-border{
+    border-bottom: 2px double rgb(0, 0, 0);
+}
+
+.MarginLeft{
+    margin-left: 1.5%;
+}
