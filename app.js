@@ -32,7 +32,7 @@ var usersRouter = require('./routes/api/users');
 app.use('/api/flights', flightsRouter);
 app.use('/api/users', usersRouter);
 app.get("/", (req, res) => {
-  res.send("responded")
+  res.send("Hellooooo!!!")
 });
 
 // catch 404 and forward to error handler
